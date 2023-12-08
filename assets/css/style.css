@@ -215,6 +215,7 @@ footer #anchor {
 .btn-group {
   .select {
     position: relative;
+    /* width: 50%; */
 
     input:checked + label {
       background-color: purple;
