@@ -1,133 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Christmas Movie Generator</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.2/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <style>
-        body {
-            background-image: url('assets/images/1.png');
-        }
+      body {
+        background-image: url("assets/images/1.png");
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="snowflakes" aria-hidden="true">
-        <div class="snowflake">
-          <div class="inner">❄</div>
-        </div>
-        <div class="snowflake">
-          <div class="inner">❅</div>
-        </div>
-        <div class="snowflake">
-          <div class="inner">☀</div>
-        </div>
-        <div class="snowflake">
-          <div class="inner">❄</div>
-        </div>
-        <div class="snowflake">
-          <div class="inner">❅</div>
-        </div>
-        <div class="snowflake">
-          <div class="inner">☀</div>
-        </div>
-        <div class="snowflake">
-          <div class="inner">❄</div>
-        </div>
-        <div class="snowflake">
-          <div class="inner">❅</div>
-        </div>
-        <div class="snowflake">
-          <div class="inner">☀</div>
-        </div>
-        <div class="snowflake">
-          <div class="inner">❄</div>
-        </div>
-        <div class="snowflake">
-          <div class="inner">❅</div>
-        </div>
-        <div class="snowflake">
-          <div class="inner">☀</div>
-        </div>
+      <div class="snowflake">
+        <div class="inner">❄</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">☀</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❄</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">☀</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❄</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">☀</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❄</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">❅</div>
+      </div>
+      <div class="snowflake">
+        <div class="inner">☀</div>
+      </div>
     </div>
-<header><img id="marquee" src="assets/images/christmasmarquee.png"></header>
-<section class ="middle">
-    <ul>
+    <header>
+      <img id="marquee" src="assets/images/christmasmarquee.png" />
+    </header>
+    <section class="middle">
+      <ul>
         <li>This is where we should put the modal for the quiz</li>
-        <li>We can leave the marquee fixed atop the page or disappear when the modal starts and bring it back for the movie reveal</li>
-    </ul>
-</section>
-<section class="modalFirst">
+        <li>
+          We can leave the marquee fixed atop the page or disappear when the
+          modal starts and bring it back for the movie reveal
+        </li>
+      </ul>
+    </section>
+    <section class="modalFirst">
+      <div
+        class="modal fade"
+        id="exampleModalToggle"
+        aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1"
+        style="display: none"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
+                Pick your Streaming Site
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <ul class="btn-group">
+                <li class="select">
+                  <input type="checkbox" id="item_1" />
+                  <label class="btn btn-warning button_select" for="item_1"
+                    >Amazon Prime</label
+                  >
+                </li>
 
-    <div class="modal fade" id="exampleModalToggle" aria-labelledby="exampleModalToggleLabel" tabindex="-1" style="display: none;" aria-hidden="true"> 
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Pick your Streaming Site</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              
-                <ul class="btn-group">
-                  <li class="select">
-                      <input type="checkbox" id="item_1">
-                      <label class="btn btn-warning button_select" for="item_1">Amazon Prime</label>
-                  </li>
-                  
-                  <li class="select">
-                      <input type="checkbox" id="item_2">
-                      <label class="btn btn-warning button_select" for="item_2">Netflix</label>
-                  </li>
-                  
-                  <li class="select">
-                      <input type="checkbox" id="item_3">
-                      <label class="btn btn-warning button_select" for="item_3">Disney+</label>
-                  </li>
-                  
-                  <li class="select">
-                      <input type="checkbox" id="item_4">
-                      <label class="btn btn-warning button_select" for="item_4">Crave</label>
-                  </li>
-                </ul>
-            
+                <li class="select">
+                  <input type="checkbox" id="item_2" />
+                  <label class="btn btn-warning button_select" for="item_2"
+                    >Netflix</label
+                  >
+                </li>
+
+                <li class="select">
+                  <input type="checkbox" id="item_3" />
+                  <label class="btn btn-warning button_select" for="item_3"
+                    >Disney+</label
+                  >
+                </li>
+
+                <li class="select">
+                  <input type="checkbox" id="item_4" />
+                  <label class="btn btn-warning button_select" for="item_4"
+                    >Crave</label
+                  >
+                </li>
+              </ul>
             </div>
             <div class="modal-footer">
-              <button class="btn forward" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"><img src="./forward.png" alt="">Open second modal</button>
+              <button
+                class="btn forward"
+                data-bs-target="#exampleModalToggle2"
+                data-bs-toggle="modal"
+              >
+                <img src="./assets/images/forward.png" alt="" />Open second
+                modal
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <div class="modal fade" id="exampleModalToggle2" aria-labelledby="exampleModalToggleLabel2" tabindex="-1" style="display: none;" aria-hidden="true">
+      <div
+        class="modal fade"
+        id="exampleModalToggle2"
+        aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1"
+        style="display: none"
+        aria-hidden="true"
+      >
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <ul>
-                <li>I am an answer.</li>
-                <li>I am also an answer.</li>
-                <li>Me too.</li>
-                <li>Me three.</li>
-            </ul>
-          
-            </div>
-            <div class="modal-footer">
-              <button class="btn forward" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal"><img src="./forward.png" alt="">Open third modal</button>
-              <button class="btn back" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"><img src="./back.png" alt="">Back</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" id="exampleModalToggle3" aria-labelledby="exampleModalToggleLabel3" tabindex="-1" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">Modal 3</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
+                Modal 2
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
             <div class="modal-body">
               <ul>
@@ -135,21 +163,47 @@
                 <li>I am also an answer.</li>
                 <li>Me too.</li>
                 <li>Me three.</li>
-            </ul>
+              </ul>
             </div>
             <div class="modal-footer">
-              <button class="btn forward" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal"><img src="./forward.png" alt="">Open fourth modal</button>
-              <button class="btn back" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal"><img src="./back.png" alt="">Back</button>
+              <button
+                class="btn back"
+                data-bs-target="#exampleModalToggle2"
+                data-bs-toggle="modal"
+              >
+                <img src="./assets/images/back.png" alt="" />Back
+              </button>
+              <button
+                class="btn forward"
+                data-bs-target="#exampleModalToggle3"
+                data-bs-toggle="modal"
+              >
+                <img src="./assets/images/forward.png" alt="" />Open third modal
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <div class="modal fade" id="exampleModalToggle4" aria-labelledby="exampleModalToggleLabel4" tabindex="-1" style="display: none;" aria-hidden="true">
+      <div
+        class="modal fade"
+        id="exampleModalToggle3"
+        aria-labelledby="exampleModalToggleLabel3"
+        tabindex="-1"
+        style="display: none"
+        aria-hidden="true"
+      >
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel4">Modal 4</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">
+                Modal 3
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
             <div class="modal-body">
               <ul>
@@ -157,21 +211,48 @@
                 <li>I am also an answer.</li>
                 <li>Me too.</li>
                 <li>Me three.</li>
-            </ul>
+              </ul>
             </div>
             <div class="modal-footer">
-              <button class="btn forward" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal"><img src="./forward.png" alt="">Open fifth modal</button>
-              <button class="btn back" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal"><img src="./back.png" alt="">Back</button>
+              <button
+                class="btn back"
+                data-bs-target="#exampleModalToggle3"
+                data-bs-toggle="modal"
+              >
+                <img src="./assets/images/back.png" alt="" />Back
+              </button>
+              <button
+                class="btn forward"
+                data-bs-target="#exampleModalToggle4"
+                data-bs-toggle="modal"
+              >
+                <img src="./assets/images/forward.png" alt="" />Open fourth
+                modal
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <div class="modal fade" id="exampleModalToggle5" aria-labelledby="exampleModalToggleLabel5" tabindex="-1" style="display: none;" aria-hidden="true">
+      <div
+        class="modal fade"
+        id="exampleModalToggle4"
+        aria-labelledby="exampleModalToggleLabel4"
+        tabindex="-1"
+        style="display: none"
+        aria-hidden="true"
+      >
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">Modal 5</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel4">
+                Modal 4
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
             <div class="modal-body">
               <ul>
@@ -179,21 +260,47 @@
                 <li>I am also an answer.</li>
                 <li>Me too.</li>
                 <li>Me three.</li>
-            </ul>
+              </ul>
             </div>
             <div class="modal-footer">
-              <button class="btn forward" data-bs-target="#exampleModalToggle6" data-bs-toggle="modal"><img src="./forward.png" alt="">Open sixth modal</button>
-              <button class="btn back" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal"><img src="./back.png" alt="">Back</button>
+              <button
+                class="btn back"
+                data-bs-target="#exampleModalToggle4"
+                data-bs-toggle="modal"
+              >
+                <img src="./assets/images/back.png" alt="" />Back
+              </button>
+              <button
+                class="btn forward"
+                data-bs-target="#exampleModalToggle5"
+                data-bs-toggle="modal"
+              >
+                <img src="./assets/images/forward.png" alt="" />Open fifth modal
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <div class="modal fade" id="exampleModalToggle6" aria-labelledby="exampleModalToggleLabel6" tabindex="-1" style="display: none;" aria-hidden="true">
+      <div
+        class="modal fade"
+        id="exampleModalToggle5"
+        aria-labelledby="exampleModalToggleLabel5"
+        tabindex="-1"
+        style="display: none"
+        aria-hidden="true"
+      >
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel6">Modal 6</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel5">
+                Modal 5
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
             <div class="modal-body">
               <ul>
@@ -201,22 +308,92 @@
                 <li>I am also an answer.</li>
                 <li>Me too.</li>
                 <li>Me three.</li>
-            </ul>
+              </ul>
             </div>
             <div class="modal-footer">
-              <button class="btn forward" data-bs-target="#exampleModalToggle6" data-bs-toggle="modal"><img src="./forward.png" alt="">Open sixth modal</button>
-              <button class="btn back" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal"><img src="./back.png" alt="">Back</button>
+              <button
+                class="btn back"
+                data-bs-target="#exampleModalToggle4"
+                data-bs-toggle="modal"
+              >
+                <img src="./assets/images/back.png" alt="" />Back
+              </button>
+              <button
+                class="btn forward"
+                data-bs-target="#exampleModalToggle6"
+                data-bs-toggle="modal"
+              >
+                <img src="./assets/images/forward.png" alt="" />Open sixth modal
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <a class="btn btn-danger" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
-</section>
-<footer class ="footer">
-    <a id = "anchor" href="https://github.com/SamGreenwood84/Christmas-Movie-Generator">Our Team</a>
-</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="main.js"></script>
-</body>
+      <div
+        class="modal fade"
+        id="exampleModalToggle6"
+        aria-labelledby="exampleModalToggleLabel6"
+        tabindex="-1"
+        style="display: none"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel6">
+                Modal 6
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>I am an answer.</li>
+                <li>I am also an answer.</li>
+                <li>Me too.</li>
+                <li>Me three.</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button
+                class="btn back"
+                data-bs-target="#exampleModalToggle5"
+                data-bs-toggle="modal"
+              >
+                <img src="./assets/images/back.png" alt="" />Back
+              </button>
+              <button
+                class="btn forward"
+                data-bs-target="#exampleModalToggle6"
+                data-bs-toggle="modal"
+              >
+                <img src="./assets/images/forward.png" alt="" />Open sixth modal
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        class="btn btn-danger"
+        data-bs-toggle="modal"
+        href="#exampleModalToggle"
+        role="button"
+        >Open first modal</a
+      >
+    </section>
+    <footer class="footer">
+      <a
+        id="anchor"
+        href="https://github.com/SamGreenwood84/Christmas-Movie-Generator"
+        >Our Team</a
+      >
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
