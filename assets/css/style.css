@@ -34,11 +34,7 @@ header {
   padding-top: 5%;
 }
 
-.middle ul {
-  list-style: none;
-}
-
-.middle ul li {
+.middle p {
   text-align: center;
   color: whitesmoke;
   font-weight: bold;
@@ -59,7 +55,7 @@ footer {
 }
 
 footer #anchor {
-  color: whitesmoke;
+  color: rgb(171, 17, 17);
 }
 
 .snowflake {
