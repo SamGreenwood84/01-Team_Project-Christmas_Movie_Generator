@@ -15,9 +15,10 @@
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Tangerine">
     <style>
-       .middle {
+       .middle, h2 {
       font-family: 'Tangerine', serif;
       font-size: 48px;
+      font-weight: bold;
      }
   </style>
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -227,6 +228,7 @@
             </div>
             <div class="modal-body">
               <ul class="btn-group">
+                <li><img class="img" src="assets/images/diehard.png"></li>
                 <li class="select">
                   <input type="checkbox" id="item_1" />
                   <label class="btn btn-warning button_select" for="item_1"
@@ -239,7 +241,6 @@
                     >Yippeee-ki-yay!</label
                   >
                 </li>
-                <li><img class="img" src="assets/images/diehard.png"></li>
             </div>
             <div class="modal-footer">
               <button
@@ -337,9 +338,8 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="modalToggleLabel5">
-                Choose your festive type
-              </h1>
-              
+                Choose your festive level
+              </h1> 
               <button
                 type="button"
                 class="btn-close"
@@ -350,6 +350,8 @@
             <div class="modal-body">
               <ul class="btn-group">
                 <li class="select">
+                  <div class ="container">
+                  <h2>Holly Jolly</h2>
                   <input type="checkbox" id="item_1" />
                   <label class="btn btn-warning button_select" for="item_1"
                     >Classic</label
@@ -379,6 +381,8 @@
                     >Fantasy</label
                   >
                 </li>
+                </div>
+                <div class ="container"><h2>Uncommon Christmas</h2>
                 <li class="select">
                   <input type="checkbox" id="item_4" />
                   <label class="btn btn-warning button_select" for="item_6"
@@ -430,6 +434,7 @@
           </div>
         </div>
       </div>
+    </div>
       <div
         class="modal fade"
         id="modalToggle6"
