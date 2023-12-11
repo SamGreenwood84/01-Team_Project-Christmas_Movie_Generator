@@ -223,7 +223,7 @@ footer #anchor {
       &:hover,
       &:focus,
       &:active {
-        background-color: purple;
+      background-color: purple;
       }
     }
     input {
