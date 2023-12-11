@@ -70,9 +70,7 @@
       <img id="marquee" src="assets/images/christmasmarquee.png" />
     </header>
     <section class="middle">
-      <ul>
-        <li>Wishing you a very Merry Christmas & a Happy New Year!</li>
-      </ul>
+        <p>Wishing you a very Merry Christmas & a Happy New Year!</p>
     </section>
     <section class="modalFirst">
       <div
@@ -101,25 +99,25 @@
                 <li class="select">
                   <input type="checkbox" id="item_1" />
                   <label class="btn btn-warning button_select" for="item_1"
-                    >Amazon Prime</label
+                    >Amazon Prime<img src="assets/images/pv.png"></label
                   >
                 </li>
                 <li class="select">
                   <input type="checkbox" id="item_2" />
                   <label class="btn btn-warning button_select" for="item_2"
-                    >Netflix</label
+                    >Netflix<img src="assets/images/nf.png"></label
                   >
                 </li>
                 <li class="select">
                   <input type="checkbox" id="item_3" />
                   <label class="btn btn-warning button_select" for="item_3"
-                    >Disney+</label
+                    >Disney+<img src="assets/images/d.png"></label
                   >
                 </li>
                 <li class="select">
                   <input type="checkbox" id="item_4" />
                   <label class="btn btn-warning button_select" for="item_4"
-                    >Crave</label
+                    >Crave<img src="assets/images/c.png"></label
                   >
                 </li>
               </ul>
@@ -241,6 +239,7 @@
                     >Yippeee-ki-yay!</label
                   >
                 </li>
+                <li><img class="img" src="assets/images/diehard.png"></li>
             </div>
             <div class="modal-footer">
               <button
@@ -289,19 +288,19 @@
                 <li class="select">
                   <input type="checkbox" id="item_1" />
                   <label class="btn btn-warning button_select" for="item_1"
-                    >Karloff</label
+                    >Karloff<img src="assets/images/ogGrinch.png"></label
                   >
                 </li>
                 <li class="select">
                   <input type="checkbox" id="item_2" />
                   <label class="btn btn-warning button_select" for="item_2"
-                    >Carrey</label
+                    >Carrey<img src="assets/images/jimGrinch.png"></label
                   >
                 </li>
                 <li class="select">
                   <input type="checkbox" id="item_3" />
                   <label class="btn btn-warning button_select" for="item_3"
-                    >Cumberbatch</label
+                    >Cumberbatch <img src="assets/images/modernGrinch.png"></label 
                   >
                 </li>
               </ul>
@@ -451,7 +450,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="modalToggleLabel6">
-                Select of level of festive cheesiness
+                On a scale of Hallmark to Classics choose your quality level
               </h1>
               <button
                 type="button"
@@ -460,34 +459,15 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
-              <ul>
-                <li class="select">
-                  <input type="checkbox" id="item_2" />
-                  <label class="btn btn-warning button_select" for="item_1"
-                    >Serious</label
-                  >
-                </li>
-                <li class="select">
-                  <input type="checkbox" id="item_2" />
-                  <label class="btn btn-warning button_select" for="item_2"
-                    >Light Hearted</label
-                  >
-                </li>
-                <li class="select">
-                  <input type="checkbox" id="item_2" />
-                  <label class="btn btn-warning button_select" for="item_3"
-                    >Hallmark</label
-                  >
-                </li>
-                <li class="select">
-                  <input type="checkbox" id="item_2" />
-                  <label class="btn btn-warning button_select" for="item_4"
-                    >Velveeta</label
-                  >
-                </li>
-                
-              </ul>
+            <div class="modal-body" id="rating">
+              <form class= "form">
+                <label for ="scale"> Quality Scale Hallmark to Classics</label>
+                <div class="sliding-scale-container">
+                <img class="img" src="assets/images/LOWhallmark.png">
+                <input type="range" min= "1" max= "9" value="5" id="amountRange">
+                <img class="img" src="assets/images/HIGHclassics.png">
+                </div>
+                </form>
             </div>
             <div class="modal-footer">
               <button
