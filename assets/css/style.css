@@ -181,6 +181,9 @@ footer #anchor {
   animation-delay: 2.5s;
 }
 
+.modal-content {
+  padding: 1%;
+}
 .modal-body ul {
   list-style: none;
   display: block;
@@ -254,7 +257,7 @@ footer #anchor {
 
   .img {
     width: auto;
-    height: 25rem;
+    height: 150px;
   }
   
   label{
