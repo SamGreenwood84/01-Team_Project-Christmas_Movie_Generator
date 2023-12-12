@@ -264,6 +264,7 @@ footer #anchor {
 
 .btn-group-single .btn-option {
   border: none;
+  justify-content: center;
   margin-bottom: 5px;
   display: flex;
   background-color: green;
