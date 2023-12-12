@@ -8,9 +8,7 @@ body {
   min-width: 100vw;
   align-items: center;
   min-height: 100vh;
-  /* background-repeat: repeat; */
   background-attachment: fixed;
-  /* background-size: contain; */
   background-size: 100% 100%;
 }
 
@@ -269,10 +267,16 @@ footer #anchor {
   }
 }
 
+.btn-option {
+  width: 200px;
+}
+
 .stream {
   border-radius: 5px;
-  max-width: 100px;
-  margin-left: 1rem;
+  max-width: 120px;
+  width: 120px;
+  max-height: 70px;
+  margin-bottom: 2px;
 } 
 
 .form {
@@ -286,11 +290,26 @@ footer #anchor {
   align-items: center
   }
 
+  .select label {
+    padding: .5rem 2rem;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .img {
     width: auto;
     height: 150px;
     border-radius: 5px;
     margin-left: 0.5rem;
+  }
+
+  .bruce {
+    margin-bottom: 1rem;
+  }
+
+  .grinch {
+    margin: 1rem;
   }
   
   label{
