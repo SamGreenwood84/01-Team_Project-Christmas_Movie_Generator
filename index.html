@@ -14,6 +14,10 @@
     />
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous"/>
     <style>
        .middle, h2 {
       font-family: 'Tangerine', serif;
@@ -96,29 +100,29 @@
               ></button>
             </div>
             <div class="modal-body">
-              <ul class="btn-group">
+              <ul class="btn-group-multiple">
                 <li class="select">
                   <input type="checkbox" id="item_1" />
                   <label class="btn btn-warning button_select" for="item_1"
-                    >Amazon Prime<img src="assets/images/pv.png" alt="amazon prime button"></label
+                    >Amazon Prime<img src="assets/images/pv.png" alt="amazon prime button" class="stream"></label
                   >
                 </li>
                 <li class="select">
                   <input type="checkbox" id="item_2" />
                   <label class="btn btn-warning button_select" for="item_2"
-                    >Netflix<img src="assets/images/nf.png" alt="netflix button"></label
+                    >Netflix<img src="assets/images/nf.png" alt="netflix button" class="stream"></label
                   >
                 </li>
                 <li class="select">
                   <input type="checkbox" id="item_3" />
                   <label class="btn btn-warning button_select" for="item_3"
-                    >Disney+<img src="assets/images/d.png" alt="Disney plus button"></label
+                    >Disney+<img src="assets/images/d.png" alt="Disney plus button" class="stream"></label
                   >
                 </li>
                 <li class="select">
                   <input type="checkbox" id="item_4" />
                   <label class="btn btn-warning button_select" for="item_4"
-                    >Crave<img src="assets/images/c.png" alt="crave button"></label
+                    >Crave<img src="assets/images/c.png" alt="crave button" class="stream"></label
                   >
                 </li>
               </ul>
@@ -158,7 +162,7 @@
               ></button>
             </div>
             <div class="modal-body">
-              <ul class="btn-group">
+              <ul class="btn-group-multiple">
                 <li class="select">
                   <input type="checkbox" id="item_1" />
                   <label class="btn btn-warning button_select" for="item_1"
@@ -227,21 +231,22 @@
               ></button>
             </div>
             <div class="modal-body">
-              <ul class="btn-group">
+              <ul class="btn-group-single">
                 <li><img class="img" src="assets/images/diehard.png" alt="die hard thumbnail"></li>
                 <li class="select">
                   <input type="checkbox" id="item_1" />
-                  <label class="btn btn-warning button_select" for="item_1"
-                    >No</label
-                  >
+                  <label class="option">
+                    <input type="radio" name="optradio"><span class="btn btn-warning btn-option">No</span>
+                  </label>
                 </li>
                 <li class="select">
                   <input type="checkbox" id="item_2" />
-                  <label class="btn btn-warning button_select" for="item_2"
-                    >Yippeee-ki-yay!</label
-                  >
+                  <label class="option">
+                    <input type="radio" name="optradio"><span class="btn btn-warning btn-option">Yippeee-ki-yay!</span>
+                  </label>
                 </li>
             </div>
+
             <div class="modal-footer">
               <button
                 class="btn back"
@@ -285,7 +290,7 @@
               ></button>
             </div>
             <div class="modal-body">
-              <ul class="btn-group">
+              <ul class="btn-group-multiple">
                 <li class="select">
                   <input type="checkbox" id="item_1" />
                   <label class="btn btn-warning button_select" for="item_1"
@@ -349,7 +354,7 @@
             </div>
             <div class="modal-body">
               <div class ="container"></div>
-              <ul class="btn-group">
+              <ul class="btn-group-multiple">
                 <li class="select">
                   <h2>Holly Jolly</h2>
                   <input type="checkbox" id="item_1" />
