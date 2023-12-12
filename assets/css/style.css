@@ -218,7 +218,7 @@ footer #anchor {
 .btn-group-multiple .select {
   position: relative;
   width: 70%;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .btn-group-multiple input:checked + label {
@@ -235,7 +235,8 @@ footer #anchor {
 }
 
 .btn-group-multiple .button_select {
-  margin: 0 10px 10px 0;
+  border: none;
+  margin-bottom: 5px;
   display: flex;
   background-color: green;
   &:hover,
@@ -262,7 +263,8 @@ footer #anchor {
 }
 
 .btn-group-single .btn-option {
-  /* margin: 0 10px 10px 0; */
+  border: none;
+  margin-bottom: 5px;
   display: flex;
   background-color: green;
   &:hover,
@@ -302,6 +304,10 @@ footer #anchor {
   flex-wrap: wrap;
 }
 
+li {
+  padding-left: 13%;
+}
+
 .img {
   width: auto;
   height: 150px;
@@ -310,15 +316,17 @@ footer #anchor {
 }
 
 .bruce {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem;  
 }
 
 .grinch {
   margin: 1rem;
 }
+
 .btn-warning {
   font-weight: bolder;
 }
+
 label {
   font-weight: bold;
   margin: 0;
