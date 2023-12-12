@@ -269,6 +269,12 @@ footer #anchor {
   }
 }
 
+.stream {
+  border-radius: 5px;
+  max-width: 100px;
+  margin-left: 1rem;
+} 
+
 .form {
   display:flex;
   justify-content: center;
@@ -283,6 +289,8 @@ footer #anchor {
   .img {
     width: auto;
     height: 150px;
+    border-radius: 5px;
+    margin-left: 0.5rem;
   }
   
   label{
