@@ -9,6 +9,8 @@
 // document.addEventListener("DOMContentLoaded", function() {
 
 // // let apiMovieKey = "2a0d51a227874bef4e79413d5a087a83";
+// let keyWord = "Christmas";
+// let lang = "en-US";
 // let movieResults = [];
 // let chosenDate = "2010";
 // const options = {
@@ -21,7 +23,7 @@
 // };
 // // First API call to get page1 results and totalPages for the rest of the calls
 // fetch(
-//   "https://api.themoviedb.org/3/search/movie?query=christmas&include_adult=false&language=en-US&page=1",
+//   `https://api.themoviedb.org/3/search/movie?query=${keyWord}&include_adult=false&language=${lang}&page=1`,
 //   options
 // )
 //   .then((response) => response.json())
@@ -68,14 +70,13 @@
 //       )
 //         .then((response) => response.json())
 //         .then((data) => {
-//           // console.log(data);
-
-//           // console.log(data.results[0].release_date.substring(0, 4));
-//           // console.log(data.results)
+//         //   console.log(data);
+//         //   console.log(data.results)
 //           data.results.forEach((movie) => {
 //             if (movie.release_date.substring(0, 4) >= chosenDate) {
 //               movieResults.push(movie);
-//               // console.log("condition met");
+//             //   console.log(movie.release_date.substring(0, 4));
+//             //   console.log("condition met");
 //             }
 //           });
 //           if (page === totalPages) {
@@ -98,27 +99,8 @@
 //           console.error(error);
 //         });
 //     }
-
-//     // console.log(movieResults);
-//     // movieResults.forEach((movie) => {
-//     //   console.log(movie.title);
-//     // });
 //   })
 //   .catch((err) => console.error(err));
-
-// // const selectedYear = "2015";
-// // let filteredYear = [];
-// // for (let i = 0; i < movieResults.length; i++) {
-// //   const movie = movieResults[i];
-// //   console.log("hi");
-// //   console.log(movie.results[i].release_date);
-// // if (movie.results.release_date.substring(0,4) === selectedYear) {
-// // filteredYear.push(movie);
-// // }
-// // }
-
-// // const selectedMovies = data.filter(obj => obj.results.release_date.substring(0, 4) === selectedYear);
-// // console.log(filteredYear);
 
 // // Get reviews with movie id, which can be found in the above query search {result.id}
 
