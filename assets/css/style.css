@@ -19,10 +19,14 @@ header {
 }
 
 #marquee {
-  display: flex;
+  padding-left: 8%;
   align-items: center;
   height: 85%;
   width: 85%;
+}
+
+.left {
+  padding-left: 22%;
 }
 
 .middle {
@@ -214,6 +218,7 @@ footer #anchor {
 .btn-group-multiple .select {
   position: relative;
   width: 70%;
+  margin-left: 10%;
 }
 
 .btn-group-multiple input:checked + label {
@@ -257,7 +262,7 @@ footer #anchor {
 }
 
 .btn-group-single .btn-option {
-  margin: 0 10px 10px 0;
+  /* margin: 0 10px 10px 0; */
   display: flex;
   background-color: green;
   &:hover,
@@ -269,6 +274,8 @@ footer #anchor {
 
 .btn-option {
   width: 200px;
+  margin: 0;
+  
 }
 
 .stream {
@@ -309,9 +316,13 @@ footer #anchor {
 .grinch {
   margin: 1rem;
 }
-
+.btn-warning {
+  font-weight: bolder;
+}
 label {
   font-weight: bold;
+  margin: 0;
+  padding-bottom: 1rem;
 }
 
 #amountRange {
