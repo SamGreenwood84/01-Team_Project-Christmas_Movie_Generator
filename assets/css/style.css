@@ -213,12 +213,12 @@ footer #anchor {
   transform: scale(0.2);
 }
 
-.btn-group .select {
+.btn-group-multiple .select {
   position: relative;
   width: 70%;
 }
 
-.btn-group input:checked + label {
+.btn-group-multiple input:checked + label {
   background-color: red;
   &:hover,
   &:active {
@@ -226,18 +226,46 @@ footer #anchor {
   }
 }
 
-.btn-group input {
+.btn-group-multiple input {
   opacity: 0;
   position: absolute;
 }
 
-.btn-group .button_select {
+.btn-group-multiple .button_select {
   margin: 0 10px 10px 0;
   display: flex;
   background-color: green;
   &:hover,
   &:active {
     background-color: green;
+  }
+}
+
+.btn-group-single .option {
+  position:relative;
+}
+
+.btn-group-single input{
+    opacity: 0;
+    position: absolute;
+  }
+
+.btn-group-single input:checked + span {
+    background-color: red;
+    &:hover,
+    &:active{
+      background-color: red;      
+    }
+} 
+
+.btn-group-single .btn-option{
+  margin: 0 10px 10px 0;
+  display:flex;
+  background-color: green;   
+  &:hover,
+  &:focus,
+  &:active{
+    background-color: green;      
   }
 }
 
