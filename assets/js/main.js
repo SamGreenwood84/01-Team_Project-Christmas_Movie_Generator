@@ -137,6 +137,7 @@ const options = {
 
 $(".submit").on("click", function () {
   const uniqueMovieIds = new Set();
+  let rating = "5";
   // First API call to get page1 results and totalPages for the rest of the calls
   fetch(
     `https://api.themoviedb.org/3/search/movie?query=${keyWord}&include_adult=false&language=${lang}&page=1`,
@@ -217,9 +218,7 @@ $(".submit").on("click", function () {
                   }
                 });
               });
-              // console.log(moviesWithGenres);
               // Filter by vote rating
-              rating = "5";
               ratedMovies = moviesWithGenres.filter((movie) => {
                 return movie.vote_average >= rating;
               });
@@ -233,13 +232,13 @@ $(".submit").on("click", function () {
               });
               pickRandomMovie();
               function pickRandomMovie() {
-                console.log("randomness initiated");
-                console.log(ratedMovies.length);
+                // console.log(ratedMovies.length);
                 let randomIndex = Math.floor(
                   Math.random() * ratedMovies.length
                 );
-                console.log(randomIndex);
-                console.log(ratedMovies[randomIndex]);
+                // console.log(randomIndex);
+                let randomChosenMovie = ratedMovies[randomIndex];
+                console.log(randomChosenMovie);
               }
             }
           })
