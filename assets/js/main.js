@@ -5,6 +5,32 @@
 //  We can work around this for now
 
 //  It will be commented out until needed
+$(".amazon").on("click", () => {
+  console.log("amazon");
+});
+$(".netflix").on("click", () => {
+  console.log("netflix");
+});
+$(".disney").on("click", () => {
+  console.log("disney");
+});
+$(".crave").on("click", () => {
+  console.log("crave");
+});
+
+$(".english").on("click", () => {
+  console.log("english");
+});
+$(".french").on("click", () => {
+  console.log("french");
+});
+$(".spanish").on("click", () => {
+  console.log("spanish");
+});
+$(".japanese").on("click", () => {
+  console.log("japanese");
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
   // let apiMovieKey = "2a0d51a227874bef4e79413d5a087a83";

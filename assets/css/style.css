@@ -215,6 +215,14 @@ footer #anchor {
   transform: scale(0.2);
 }
 
+.submit {
+  position: absolute;
+  padding: .2rem 2rem;
+  margin-top: 2rem;
+  left: 110px;
+  display: block;
+}
+
 .btn-group-multiple .select {
   position: relative;
   width: 70%;
