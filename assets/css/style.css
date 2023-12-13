@@ -172,8 +172,8 @@ header {
 }
 
 .overflow {
-  max-height: 88vh!important;
-  overflow-y: auto!important;
+  max-height: 88vh !important;
+  overflow-y: auto !important;
 }
 
 .modal-body ul {
@@ -207,7 +207,7 @@ header {
 
 .submit {
   position: absolute;
-  padding: .2rem 2rem;
+  padding: 0.2rem 2rem;
   margin-top: 2rem;
   left: 110px;
   display: block;
@@ -276,7 +276,6 @@ header {
 .btn-option {
   width: 200px;
   margin: 0;
-  
 }
 
 .stream {
@@ -315,7 +314,7 @@ li {
 }
 
 .bruce {
-  margin-bottom: 1rem;  
+  margin-bottom: 1rem;
 }
 
 .grinch {
@@ -338,7 +337,7 @@ label {
 }
 
 .box ul {
-list-style: none;
+  list-style: none;
 }
 
 .none {
