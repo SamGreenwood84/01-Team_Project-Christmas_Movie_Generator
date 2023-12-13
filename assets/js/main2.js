@@ -23,6 +23,9 @@ $(".submit").on("click", () => {
     populateMovieCard();
   }
 });
+$(".restart").on("click", () => {
+    window.location.href = "index.html";
+});
 
 function populateMovieCard() {
   const options = {

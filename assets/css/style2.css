@@ -10,7 +10,9 @@ body {
 .card {
   border: 12px dotted red;
   top: 75px;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
+
 
 .overflow {
   max-height: 88vh !important;
@@ -139,6 +141,14 @@ body {
   animation-delay: 2.5s;
 }
 
+.submit,
+.restart {
+    margin: .2rem 2rem;
+    color: midnightblue;
+    font-weight: bold;
+    width: 150px;
+}
+
 footer {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 30px;
@@ -154,3 +164,24 @@ footer {
 footer #anchor {
   color: rgb(171, 17, 17);
 }
+
+@media screen and (max-width: 767px) {
+
+    body {
+      font-size: 14px;
+    }
+
+    .btn {
+        margin: .2rem 0;
+        transform: scale(.8);
+    }
+
+    .card {
+      max-height: 400px;
+      transform: scale(.7);
+      margin: 0 auto;
+      top: -75px;
+    }
+    
+    /* Add more styles here */
+  }
