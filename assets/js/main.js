@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 //   console.log(movie.release_date.substring(0, 4));
               }
             });
+            // Wait for all the fetches to be complete
             if (page === totalPages) {
               console.log(movieResults);
               // Loop through each movie in the movieResults array
@@ -90,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 genreIds.forEach((genreId) => {
                   // Display or select the genre ID
                   console.log(genreId);
+                  // Filter by included genre
                   if (idsToFilter.includes(genreId)) {
                     const filteredMovie = movieResults.filter(
                       (m) => m.id === movie.id
@@ -99,7 +101,12 @@ document.addEventListener("DOMContentLoaded", function () {
                   }
                 });
               });
+              // Filter by vote rating
               console.log(moviesWithGenres);
+              const ratedMovies = moviesWithGenres.filter(movie => {
+                return movie.vote_average > 5;
+              })
+              console.log(ratedMovies);
             }
           })
           .catch((error) => {
