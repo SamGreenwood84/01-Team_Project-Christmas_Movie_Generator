@@ -22,15 +22,19 @@ $(".crave").on("click", () => {
 // Modal 2 listeners
 $(".english").on("click", () => {
   console.log("english");
+  lang = "en-US";
 });
 $(".french").on("click", () => {
   console.log("french");
+  lang = "fr-EU";
 });
 $(".spanish").on("click", () => {
   console.log("spanish");
+  lang = "es-EU";
 });
 $(".japanese").on("click", () => {
   console.log("japanese");
+  lang = "ja-US";
 });
 // Modal 3 listeners
 $(".noBruce").on("click", () => {
@@ -42,12 +46,22 @@ $(".yesBruce").on("click", () => {
 // Modal 4 listeners
 $(".karloff").on("click", () => {
   console.log("karloff");
+  // 1989 and earlier
+  chosenDate = "1920";
+  limitDate = "1990";
+  
 });
 $(".carrey").on("click", () => {
   console.log("carrey");
+  // 1990's to 2010
+  chosenDate = "1990";
+  limitDate = "2011";
 });
 $(".cumber").on("click", () => {
   console.log("cumberbatch");
+  // 2011 to present
+  chosenDate = "2011";
+  limitDate = "2024";
 });
 // Modal 5 section 1 listeners
 $(".classic").on("click", () => {
@@ -82,14 +96,17 @@ $(".adventure").on("click", () => {
   console.log("advent");
 });
 
-
+let lang;
+let rating;
+let chosenDate;
+let limitDate;
 $(".submit").on("click", function () {
   // let apiMovieKey = "2a0d51a227874bef4e79413d5a087a83";
-  let rating;
+  
   let keyWord = "Christmas";
-  let lang = "en-US";
+  
   let movieResults = [];
-  let chosenDate = "2010";
+  
   const options = {
     method: "GET",
     headers: {
@@ -107,7 +124,7 @@ $(".submit").on("click", function () {
     .then((data) => {
       movieResults = [];
       data.results.forEach((movie) => {
-        if (movie.release_date.substring(0, 4) >= chosenDate) {
+        if (movie.release_date.substring(0, 4) >= chosenDate && movie.release_date.substring(0, 4) < limitDate) {
           movieResults.push(movie);
           // console.log("condition met");
         }
@@ -152,7 +169,7 @@ $(".submit").on("click", function () {
             const idsToFilter = [35,10751];
             const moviesWithGenres = [];
             data.results.forEach((movie) => {
-              if (movie.release_date.substring(0, 4) >= chosenDate) {
+              if (movie.release_date.substring(0, 4) >= chosenDate && movie.release_date.substring(0, 4) < limitDate) {
                 movieResults.push(movie);
                 //   console.log(movie.release_date.substring(0, 4));
               }
