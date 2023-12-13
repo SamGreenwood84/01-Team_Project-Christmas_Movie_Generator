@@ -5,6 +5,11 @@
 //  We can work around this for now
 
 //  It will be commented out until needed
+let lang;
+let rating;
+let chosenDate;
+let limitDate;
+let idsToFilter = [];
 
 // Modal 1 listeners
 $(".amazon").on("click", () => {
@@ -64,45 +69,62 @@ $(".cumber").on("click", () => {
   limitDate = "2024";
 });
 // Modal 5 section 1 listeners
-$(".classic").on("click", () => {
-  console.log("classic");
+$(".family").on("click", () => {
+  console.log("family");
+  let id = "10751";
+  idsToFilter.push(id);
 });
 $(".comedy").on("click", () => {
   console.log("comedy");
+  let id = "35";
+  idsToFilter.push(id);
 });
 $(".anime").on("click", () => {
   console.log("anime");
+  let id = "16";
+  idsToFilter.push(id);
 });
 $(".music").on("click", () => {
   console.log("musical");
+  let id = "10402";
+  idsToFilter.push(id);
 });
 $(".fantasy").on("click", () => {
   console.log("fantasy");
+  let id = "14";
+  idsToFilter.push(id);
 });
 // Modal 5 section 2 listeners
 $(".horror").on("click", () => {
   console.log("horror");
+  let id = "27";
+  idsToFilter.push(id);
 });
 $(".drama").on("click", () => {
   console.log("drama");
+  let id = "18";
+  idsToFilter.push(id);
 });
 $(".romance").on("click", () => {
   console.log("romp");
+  let id = "10749";
+  idsToFilter.push(id);
 });
 $(".action").on("click", () => {
   console.log("action");
+  let id = "28";
+  idsToFilter.push(id);
 });
 $(".adventure").on("click", () => {
   console.log("advent");
+  let id = "12";
+  idsToFilter.push(id);
 });
 
-let lang;
-let rating;
-let chosenDate;
-let limitDate;
+
 $(".submit").on("click", function () {
   // let apiMovieKey = "2a0d51a227874bef4e79413d5a087a83";
-  
+  console.log(idsToFilter);
   let keyWord = "Christmas";
   
   let movieResults = [];
@@ -166,8 +188,7 @@ $(".submit").on("click", function () {
           .then((data) => {
             //   console.log(data);
             //   console.log(data.results)
-            const idsToFilter = [35,10751];
-            const moviesWithGenres = [];
+            let moviesWithGenres = [];
             data.results.forEach((movie) => {
               if (movie.release_date.substring(0, 4) >= chosenDate && movie.release_date.substring(0, 4) < limitDate) {
                 movieResults.push(movie);
@@ -181,18 +202,17 @@ $(".submit").on("click", function () {
               movieResults.forEach((movie) => {
                 console.log(movie.title);
                 // Access the genre_ids property of the current movie
-                const genreIds = movie.genre_ids;
+                let genreIds = movie.genre_ids;
                 // Loop through each genre ID in the genre_ids array
                 genreIds.forEach((genreId) => {
                   // Display or select the genre ID
-                  console.log(genreId);
+                  // console.log(genreId);
                   // Filter by included genre
-                  if (idsToFilter.includes(genreId)) {
+                  if (idsToFilter.includes(`${genreId}`)) {
                     const filteredMovie = movieResults.filter(
-                      (m) => m.id === movie.id
+                      (m) => m.id == movie.id
                     );
-
-                    moviesWithGenres.push(filteredMovie[0]);
+                    moviesWithGenres = moviesWithGenres.concat(filteredMovie);
                   }
                 });
               });
