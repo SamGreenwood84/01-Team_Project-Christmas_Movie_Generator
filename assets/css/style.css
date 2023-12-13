@@ -170,6 +170,12 @@ header {
 .modal-content {
   padding: 1%;
 }
+
+.overflow {
+  max-height: 80vh;
+  overflow-y: auto!important;
+}
+
 .modal-body ul {
   list-style: none;
   display: block;
