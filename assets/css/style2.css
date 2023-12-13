@@ -4,7 +4,7 @@ body {
   }  
 
 .image-col img {
-  width: 250%;
+  width: 200%;
 }
 
 .card {
@@ -183,5 +183,4 @@ footer #anchor {
       top: -75px;
     }
     
-    /* Add more styles here */
   }
