@@ -6,12 +6,107 @@
 
 //  It will be commented out until needed
 
-document.addEventListener("DOMContentLoaded", function () {
+// Modal 1 listeners
+$(".amazon").on("click", () => {
+  console.log("amazon");
+});
+$(".netflix").on("click", () => {
+  console.log("netflix");
+});
+$(".disney").on("click", () => {
+  console.log("disney");
+});
+$(".crave").on("click", () => {
+  console.log("crave");
+});
+// Modal 2 listeners
+$(".english").on("click", () => {
+  console.log("english");
+  lang = "en-US";
+});
+$(".french").on("click", () => {
+  console.log("french");
+  lang = "fr-EU";
+});
+$(".spanish").on("click", () => {
+  console.log("spanish");
+  lang = "es-EU";
+});
+$(".japanese").on("click", () => {
+  console.log("japanese");
+  lang = "ja-US";
+});
+// Modal 3 listeners
+$(".noBruce").on("click", () => {
+  console.log("no bruce");
+});
+$(".yesBruce").on("click", () => {
+  console.log("yes bruce");
+});
+// Modal 4 listeners
+$(".karloff").on("click", () => {
+  console.log("karloff");
+  // 1989 and earlier
+  chosenDate = "1920";
+  limitDate = "1990";
+  
+});
+$(".carrey").on("click", () => {
+  console.log("carrey");
+  // 1990's to 2010
+  chosenDate = "1990";
+  limitDate = "2011";
+});
+$(".cumber").on("click", () => {
+  console.log("cumberbatch");
+  // 2011 to present
+  chosenDate = "2011";
+  limitDate = "2024";
+});
+// Modal 5 section 1 listeners
+$(".classic").on("click", () => {
+  console.log("classic");
+});
+$(".comedy").on("click", () => {
+  console.log("comedy");
+});
+$(".anime").on("click", () => {
+  console.log("anime");
+});
+$(".music").on("click", () => {
+  console.log("musical");
+});
+$(".fantasy").on("click", () => {
+  console.log("fantasy");
+});
+// Modal 5 section 2 listeners
+$(".horror").on("click", () => {
+  console.log("horror");
+});
+$(".drama").on("click", () => {
+  console.log("drama");
+});
+$(".romance").on("click", () => {
+  console.log("romp");
+});
+$(".action").on("click", () => {
+  console.log("action");
+});
+$(".adventure").on("click", () => {
+  console.log("advent");
+});
+
+let lang;
+let rating;
+let chosenDate;
+let limitDate;
+$(".submit").on("click", function () {
   // let apiMovieKey = "2a0d51a227874bef4e79413d5a087a83";
+  
   let keyWord = "Christmas";
-  let lang = "en-US";
+  
   let movieResults = [];
-  let chosenDate = "2010";
+  
   const options = {
     method: "GET",
     headers: {
@@ -29,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((data) => {
       movieResults = [];
       data.results.forEach((movie) => {
-        if (movie.release_date.substring(0, 4) >= chosenDate) {
+        if (movie.release_date.substring(0, 4) >= chosenDate && movie.release_date.substring(0, 4) < limitDate) {
           movieResults.push(movie);
           // console.log("condition met");
         }
@@ -74,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const idsToFilter = [35,10751];
             const moviesWithGenres = [];
             data.results.forEach((movie) => {
-              if (movie.release_date.substring(0, 4) >= chosenDate) {
+              if (movie.release_date.substring(0, 4) >= chosenDate && movie.release_date.substring(0, 4) < limitDate) {
                 movieResults.push(movie);
                 //   console.log(movie.release_date.substring(0, 4));
               }
@@ -101,10 +196,11 @@ document.addEventListener("DOMContentLoaded", function () {
                   }
                 });
               });
-              // Filter by vote rating
               console.log(moviesWithGenres);
+              // Filter by vote rating
+              rating = "5";
               const ratedMovies = moviesWithGenres.filter(movie => {
-                return movie.vote_average > 5;
+                return movie.vote_average >= rating;
               })
               console.log(ratedMovies);
             }
