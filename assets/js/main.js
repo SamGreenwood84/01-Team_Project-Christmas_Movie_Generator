@@ -5,6 +5,8 @@
 //  We can work around this for now
 
 //  It will be commented out until needed
+
+// Modal 1 listeners
 $(".amazon").on("click", () => {
   console.log("amazon");
 });
@@ -17,7 +19,7 @@ $(".disney").on("click", () => {
 $(".crave").on("click", () => {
   console.log("crave");
 });
-
+// Modal 2 listeners
 $(".english").on("click", () => {
   console.log("english");
 });
@@ -30,10 +32,60 @@ $(".spanish").on("click", () => {
 $(".japanese").on("click", () => {
   console.log("japanese");
 });
+// Modal 3 listeners
+$(".noBruce").on("click", () => {
+  console.log("no bruce");
+});
+$(".yesBruce").on("click", () => {
+  console.log("yes bruce");
+});
+// Modal 4 listeners
+$(".karloff").on("click", () => {
+  console.log("karloff");
+});
+$(".carrey").on("click", () => {
+  console.log("carrey");
+});
+$(".cumber").on("click", () => {
+  console.log("cumberbatch");
+});
+// Modal 5 section 1 listeners
+$(".classic").on("click", () => {
+  console.log("classic");
+});
+$(".comedy").on("click", () => {
+  console.log("comedy");
+});
+$(".anime").on("click", () => {
+  console.log("anime");
+});
+$(".music").on("click", () => {
+  console.log("musical");
+});
+$(".fantasy").on("click", () => {
+  console.log("fantasy");
+});
+// Modal 5 section 2 listeners
+$(".horror").on("click", () => {
+  console.log("horror");
+});
+$(".drama").on("click", () => {
+  console.log("drama");
+});
+$(".romance").on("click", () => {
+  console.log("romp");
+});
+$(".action").on("click", () => {
+  console.log("action");
+});
+$(".adventure").on("click", () => {
+  console.log("advent");
+});
 
 
-document.addEventListener("DOMContentLoaded", function () {
+$(".submit").on("click", function () {
   // let apiMovieKey = "2a0d51a227874bef4e79413d5a087a83";
+  let rating;
   let keyWord = "Christmas";
   let lang = "en-US";
   let movieResults = [];
@@ -127,10 +179,11 @@ document.addEventListener("DOMContentLoaded", function () {
                   }
                 });
               });
-              // Filter by vote rating
               console.log(moviesWithGenres);
+              // Filter by vote rating
+              rating = "5";
               const ratedMovies = moviesWithGenres.filter(movie => {
-                return movie.vote_average > 5;
+                return movie.vote_average >= rating;
               })
               console.log(ratedMovies);
             }
