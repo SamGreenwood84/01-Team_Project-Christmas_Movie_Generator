@@ -172,7 +172,7 @@ header {
 }
 
 .overflow {
-  max-height: 80vh;
+  max-height: 88vh!important;
   overflow-y: auto!important;
 }
 
@@ -337,7 +337,7 @@ label {
   align-items: center;
 }
 
-.container ul {
+.box ul {
 list-style: none;
 }
 
