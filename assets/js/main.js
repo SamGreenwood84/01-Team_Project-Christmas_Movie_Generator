@@ -5,6 +5,15 @@
 //  We can work around this for now
 
 //  It will be commented out until needed
+const keyWord = "Christmas";
+let lang;
+let rating;
+let chosenDate;
+let limitDate;
+let id;
+let movieResults = [];
+let moviesWithGenres = [];
+let idsToFilter = [];
 
 // Modal 1 listeners
 $(".amazon").on("click", () => {
@@ -64,49 +73,61 @@ $(".cumber").on("click", () => {
   limitDate = "2024";
 });
 // Modal 5 section 1 listeners
-$(".classic").on("click", () => {
-  console.log("classic");
+$(".family").on("click", () => {
+  console.log("family");
+  id = "10751";
+  idsToFilter.push(id);
 });
 $(".comedy").on("click", () => {
   console.log("comedy");
+  id = "35";
+  idsToFilter.push(id);
 });
 $(".anime").on("click", () => {
   console.log("anime");
+  id = "16";
+  idsToFilter.push(id);
 });
 $(".music").on("click", () => {
   console.log("musical");
+  id = "10402";
+  idsToFilter.push(id);
 });
 $(".fantasy").on("click", () => {
   console.log("fantasy");
+  id = "14";
+  idsToFilter.push(id);
 });
 // Modal 5 section 2 listeners
 $(".horror").on("click", () => {
   console.log("horror");
+  id = "27";
+  idsToFilter.push(id);
 });
 $(".drama").on("click", () => {
   console.log("drama");
+  id = "18";
+  idsToFilter.push(id);
 });
 $(".romance").on("click", () => {
   console.log("romp");
+  id = "10749";
+  idsToFilter.push(id);
 });
 $(".action").on("click", () => {
   console.log("action");
+  id = "28";
+  idsToFilter.push(id);
 });
 $(".adventure").on("click", () => {
   console.log("advent");
+  id = "12";
+  idsToFilter.push(id);
 });
 
-let lang;
-let rating;
-let chosenDate;
-let limitDate;
+
 $(".submit").on("click", function () {
-  // let apiMovieKey = "2a0d51a227874bef4e79413d5a087a83";
-  
-  let keyWord = "Christmas";
-  
-  let movieResults = [];
-  
+  // let apiMovieKey = "2a0d51a227874bef4e79413d5a087a83";  
   const options = {
     method: "GET",
     headers: {
@@ -126,7 +147,6 @@ $(".submit").on("click", function () {
       data.results.forEach((movie) => {
         if (movie.release_date.substring(0, 4) >= chosenDate && movie.release_date.substring(0, 4) < limitDate) {
           movieResults.push(movie);
-          // console.log("condition met");
         }
       });
       const result = data.results;
@@ -156,7 +176,7 @@ $(".submit").on("click", function () {
 
       //    })
 
-      // The rest of the calls with totalPages being the #n of calls
+      // The rest of the calls with totalPages being the # of calls
       for (let page = 170; page <= totalPages; page++) {
         fetch(
           `https://api.themoviedb.org/3/search/movie?query=${keyWord}&include_adult=false&language=${lang}&page=${page}`,
@@ -164,35 +184,24 @@ $(".submit").on("click", function () {
         )
           .then((response) => response.json())
           .then((data) => {
-            //   console.log(data);
-            //   console.log(data.results)
-            const idsToFilter = [35,10751];
-            const moviesWithGenres = [];
             data.results.forEach((movie) => {
               if (movie.release_date.substring(0, 4) >= chosenDate && movie.release_date.substring(0, 4) < limitDate) {
                 movieResults.push(movie);
-                //   console.log(movie.release_date.substring(0, 4));
               }
             });
             // Wait for all the fetches to be complete
             if (page === totalPages) {
-              console.log(movieResults);
               // Loop through each movie in the movieResults array
               movieResults.forEach((movie) => {
-                console.log(movie.title);
-                // Access the genre_ids property of the current movie
-                const genreIds = movie.genre_ids;
-                // Loop through each genre ID in the genre_ids array
+                let genreIds = movie.genre_ids;
                 genreIds.forEach((genreId) => {
-                  // Display or select the genre ID
-                  console.log(genreId);
-                  // Filter by included genre
-                  if (idsToFilter.includes(genreId)) {
+                  // Filter by included genre IDs
+                  if (idsToFilter.includes(`${genreId}`)) {
                     const filteredMovie = movieResults.filter(
-                      (m) => m.id === movie.id
+                      (m) => m.id == movie.id
                     );
-
-                    moviesWithGenres.push(filteredMovie[0]);
+                    // Update moviesWithGenres
+                    moviesWithGenres = moviesWithGenres.concat(filteredMovie);
                   }
                 });
               });
@@ -203,6 +212,9 @@ $(".submit").on("click", function () {
                 return movie.vote_average >= rating;
               })
               console.log(ratedMovies);
+              ratedMovies.forEach((movie) => {
+                console.log(movie.title);
+              });
             }
           })
           .catch((error) => {
@@ -213,9 +225,11 @@ $(".submit").on("click", function () {
     })
     .catch((err) => console.error(err));
 
-  // Get reviews with movie id, which can be found in the above query search {result.id}
+  //   let movieId = "5825";
 
-  //   fetch('https://api.themoviedb.org/3/movie/11395/reviews', options)
+  // // Get reviews with movie id, which can be found in the above query search {result.id}
+
+  //   fetch(`https://api.themoviedb.org/3/movie/5825/reviews`, options)
   //   .then(response => response.json())
   // .then(data => {
   //   console.log(data);
