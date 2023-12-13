@@ -334,3 +334,7 @@ label {
 .container ul {
 list-style: none;
 }
+
+.none {
+  display: none;
+}

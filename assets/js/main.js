@@ -6,14 +6,15 @@
 
 //  It will be commented out until needed
 const keyWord = "Christmas";
-let lang;
-let rating;
-let chosenDate;
-let limitDate;
-let id;
+let lang = "";
+let rating = "";
+let chosenDate = "";
+let limitDate = "";
+let id = "";
 let movieResults = [];
 let moviesWithGenres = [];
 let idsToFilter = [];
+let ratedMovies = [];
 
 // Modal 1 listeners
 $(".amazon").on("click", () => {
@@ -48,6 +49,7 @@ $(".japanese").on("click", () => {
 // Modal 3 listeners
 $(".noBruce").on("click", () => {
   console.log("no bruce");
+  $(".uncommon").addClass("none");
 });
 $(".yesBruce").on("click", () => {
   console.log("yes bruce");
@@ -124,18 +126,17 @@ $(".adventure").on("click", () => {
   id = "12";
   idsToFilter.push(id);
 });
+// let apiMovieKey = "2a0d51a227874bef4e79413d5a087a83";
+const options = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYTBkNTFhMjI3ODc0YmVmNGU3OTQxM2Q1YTA4N2E4MyIsInN1YiI6IjY1NjkxOWY5YjdkMzUyMDEwYjUzYjRkNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.47k3rlk5NKDz5f-TsTWyak6hnq2mdRFdS2O5MyF6ZOk",
+  },
+};
 
-
-$(".submit").on("click", function () {
-  // let apiMovieKey = "2a0d51a227874bef4e79413d5a087a83";  
-  const options = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYTBkNTFhMjI3ODc0YmVmNGU3OTQxM2Q1YTA4N2E4MyIsInN1YiI6IjY1NjkxOWY5YjdkMzUyMDEwYjUzYjRkNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.47k3rlk5NKDz5f-TsTWyak6hnq2mdRFdS2O5MyF6ZOk",
-    },
-  };
+$(".submit").on("click", function () {  
   // First API call to get page1 results and totalPages for the rest of the calls
   fetch(
     `https://api.themoviedb.org/3/search/movie?query=${keyWord}&include_adult=false&language=${lang}&page=1`,
@@ -205,16 +206,24 @@ $(".submit").on("click", function () {
                   }
                 });
               });
-              console.log(moviesWithGenres);
+              // console.log(moviesWithGenres);
               // Filter by vote rating
               rating = "5";
-              const ratedMovies = moviesWithGenres.filter(movie => {
+              ratedMovies = moviesWithGenres.filter(movie => {
                 return movie.vote_average >= rating;
               })
               console.log(ratedMovies);
               ratedMovies.forEach((movie) => {
                 console.log(movie.title);
               });
+              pickRandomMovie();
+              function pickRandomMovie() {
+                console.log("randomness initiated");
+                console.log(ratedMovies.length);
+                let randomIndex = Math.floor(Math.random()*(ratedMovies.length));
+                console.log(randomIndex);
+                console.log(ratedMovies[randomIndex]);
+              }
             }
           })
           .catch((error) => {
