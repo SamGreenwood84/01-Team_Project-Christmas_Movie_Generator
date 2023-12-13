@@ -60,7 +60,6 @@ $(".karloff").on("click", () => {
   // 1989 and earlier
   chosenDate = "1920";
   limitDate = "1990";
-  
 });
 $(".carrey").on("click", () => {
   console.log("carrey");
@@ -136,7 +135,8 @@ const options = {
   },
 };
 
-$(".submit").on("click", function () {  
+$(".submit").on("click", function () {
+  const uniqueMovieIds = new Set();
   // First API call to get page1 results and totalPages for the rest of the calls
   fetch(
     `https://api.themoviedb.org/3/search/movie?query=${keyWord}&include_adult=false&language=${lang}&page=1`,
@@ -146,8 +146,13 @@ $(".submit").on("click", function () {
     .then((data) => {
       movieResults = [];
       data.results.forEach((movie) => {
-        if (movie.release_date.substring(0, 4) >= chosenDate && movie.release_date.substring(0, 4) < limitDate) {
+        if (
+          movie.release_date.substring(0, 4) >= chosenDate &&
+          movie.release_date.substring(0, 4) < limitDate &&
+          !uniqueMovieIds.has(movie.id)
+        ) {
           movieResults.push(movie);
+          uniqueMovieIds.add(movie.id);
         }
       });
       const result = data.results;
@@ -186,8 +191,14 @@ $(".submit").on("click", function () {
           .then((response) => response.json())
           .then((data) => {
             data.results.forEach((movie) => {
-              if (movie.release_date.substring(0, 4) >= chosenDate && movie.release_date.substring(0, 4) < limitDate) {
+              // If movie is within date range and has not already been added, gets added to array
+              if (
+                movie.release_date.substring(0, 4) >= chosenDate &&
+                movie.release_date.substring(0, 4) < limitDate &&
+                !uniqueMovieIds.has(movie.id)
+              ) {
                 movieResults.push(movie);
+                uniqueMovieIds.add(movie.id);
               }
             });
             // Wait for all the fetches to be complete
@@ -199,7 +210,7 @@ $(".submit").on("click", function () {
                   // Filter by included genre IDs
                   if (idsToFilter.includes(`${genreId}`)) {
                     const filteredMovie = movieResults.filter(
-                      (m) => m.id == movie.id
+                      (m) => m.id === movie.id
                     );
                     // Update moviesWithGenres
                     moviesWithGenres = moviesWithGenres.concat(filteredMovie);
@@ -209,9 +220,13 @@ $(".submit").on("click", function () {
               // console.log(moviesWithGenres);
               // Filter by vote rating
               rating = "5";
-              ratedMovies = moviesWithGenres.filter(movie => {
+              ratedMovies = moviesWithGenres.filter((movie) => {
                 return movie.vote_average >= rating;
-              })
+              });
+              // Remove duplicates based on movie ID
+              ratedMovies = Array.from(
+                new Set(ratedMovies.map((movie) => movie.id))
+              ).map((id) => ratedMovies.find((movie) => movie.id === id));
               console.log(ratedMovies);
               ratedMovies.forEach((movie) => {
                 console.log(movie.title);
@@ -220,7 +235,9 @@ $(".submit").on("click", function () {
               function pickRandomMovie() {
                 console.log("randomness initiated");
                 console.log(ratedMovies.length);
-                let randomIndex = Math.floor(Math.random()*(ratedMovies.length));
+                let randomIndex = Math.floor(
+                  Math.random() * ratedMovies.length
+                );
                 console.log(randomIndex);
                 console.log(ratedMovies[randomIndex]);
               }
