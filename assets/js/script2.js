@@ -11,7 +11,7 @@ const options = {
     method: 'GET', 
     headers: {
         'Content-Type': 'application/json',
-        'X-RapidAPI-Key': '2e0c500a89mshab8f861fe70bf86p1a5cdfjsn898ddcd83248',
+        'X-RapidAPI-Key': '15b7f7c681msh4515c17b047a2b6p1c5dacjsn1f4ed41bdb39',
        'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
    }
     };
