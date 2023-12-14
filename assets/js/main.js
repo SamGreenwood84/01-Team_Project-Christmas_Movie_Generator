@@ -13,6 +13,8 @@ let movieResults = [];
 let moviesWithGenres = [];
 let idsToFilter = [];
 let ratedMovies = [];
+let yesBruceClicked = false;
+let noBruceClicked = false;
 
 // Modal 1 listeners
 $(".amazon").on("click", () => {
@@ -44,13 +46,31 @@ $(".japanese").on("click", () => {
   console.log("japanese");
   lang = "ja-US";
 });
+$("#modalToggle2 .forward").on("click", () => {
+  console.log("event happened");
+  if (typeof lang === "undefined" || lang === "") {
+    alert("Please choose a language.");
+  } else {
+    $("#modalToggle3").modal("show");
+  }
+});
 // Modal 3 listeners
 $(".noBruce").on("click", () => {
+  noBruceClicked = true;
   console.log("no bruce");
   $(".uncommon").addClass("none");
 });
 $(".yesBruce").on("click", () => {
+  yesBruceClicked = true;
   console.log("yes bruce");
+});
+$("#modalToggle3 .forward").on("click", () => {
+  console.log("event happened");
+  if (yesBruceClicked || noBruceClicked) {
+    $("#modalToggle4").modal("show");
+  } else {
+    alert("Please select an option.");    
+  }
 });
 // Modal 4 listeners
 $(".karloff").on("click", () => {
