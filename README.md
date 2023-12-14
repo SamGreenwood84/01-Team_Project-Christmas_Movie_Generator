@@ -43,6 +43,9 @@ Sam: "I used w3Schools, MDN Web Docs and our previous class activites on APIS, S
 [Fetch reference for Streaming Availability API-Web Dev Simplified](https://youtu.be/cuEtnrL9-H0?si=766G5ifvbWAE_Zkh) 
 [Sliding scale Reference-Web Dev Simplified](https://www.youtube.com/watch?v=iKo9pDKKHnc)
 
+Emilia: "I used W3Schools, CSSnowflakes and codepen.io for the Snowflakes and Multiple/Single select buttons."
+[Snowflakes on screen throughout the quiz](https://pajasevi.github.io/CSSnowflakes/)
+[Examples taken for Multiple/Single select buttons](https://codepen.io/kiprutobrian/pen/YzyOKjB)
 ## License
 
 Please see attached license file.
