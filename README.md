@@ -1,19 +1,20 @@
 # Christmas-Movie-Generator
 
-**First Team Project**
+** First Team Project **
 
 by Emilia Stewart, Ethan Wright, Shawn Meister & Sam Greenwood
 
 ## User Story
 
-AS A busy person who loves Christmas 
-
-I WANT to take a fun short quiz to help choose my next Christmas Movie 
-
+```text
+AS A busy person who loves Christmas
+I WANT to take a fun short quiz to help choose my next Christmas Movie
 SO THAT I can save myself and my family time and effort this season
+```
 
 ## Usage
 
+```text
 GIVEN I am taking a quiz
 WHEN I Click Let's Get Started button 
 THEN first question modal will populate
@@ -26,7 +27,7 @@ THEN my next Christmas Movie will be revealed on the next page
 WHEN I have reviewed my selection movie card with Image, Title, Description, Stream Availibility, Rating and Release Date
 THEN I will  be able to click Next Movie to review other selections
 within the chosen criteria or click  to redo the quiz
-
+```
 
 ## Mockup
 
@@ -35,6 +36,9 @@ Here's an image showing the appearance of the web application:
 ![Theartre setting with Christmas billboard](assets/images/XmasMockup.png)
 
 ## Credits
+
+Shawn: "I used Bootstrap Modal templates for our questions area. W3Schools and MDN Web Docs have been a valuable resource. Class notes were helpful for storing variables in local storage. The code snippets dealing with duplicate movies being in our array, and for filtering our array by ID were found on StackOverflow. Thanks are given to my teammates for the support shown, the concept and the idea generation we have accomplished together."
+
 
 ## License
 
