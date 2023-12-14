@@ -118,10 +118,17 @@ $(".action").on("click", () => {
   id = "28";
   idsToFilter.push(id);
 });
-$(".adventure").on("click", () => {
+$(".adventure").on("input", () => {
   console.log("advent");
   id = "12";
   idsToFilter.push(id);
+});
+
+$("#amountRange").on("input", () => {
+  let inputValue = $("#amountRange").val();
+  console.log(inputValue);
+  rating = inputValue;
+  console.log(rating);
 });
 
 const options = {
@@ -135,7 +142,7 @@ const options = {
 
 $(".submit").on("click", function () {
   const uniqueMovieIds = new Set();
-  let rating = "5";
+  // let rating = "5";
   // First API call to get page1 results and totalPages for the rest of the calls
   fetch(
     `https://api.themoviedb.org/3/search/movie?query=${keyWord}&include_adult=false&language=${lang}&page=1`,
