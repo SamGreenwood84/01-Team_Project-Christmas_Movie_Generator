@@ -349,3 +349,10 @@ label {
   display: flex;
   align-items: center;
 }
+
+/* Alert Modal */
+#alert {
+  font-weight: bolder;
+  top: 60px;
+  left: 75px;
+}
