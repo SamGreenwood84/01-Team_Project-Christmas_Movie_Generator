@@ -1,3 +1,4 @@
+/* Universal Styling */
 * {
   box-sizing: border-box;
 }
@@ -12,6 +13,7 @@ body {
   background-size: 100% 100%;
 }
 
+/* Header */
 header {
   width: auto;
   height: auto;
@@ -24,11 +26,7 @@ header {
   height: 85%;
   width: 85%;
 }
-
-.left {
-  padding-left: 22%;
-}
-
+/* Middle body section */
 .middle {
   display: flex;
   flex-direction: column;
@@ -45,6 +43,11 @@ header {
   text-wrap: wrap;
 }
 
+.left {
+  padding-left: 22%;
+}
+
+/* Snowflake Styling and Animation */
 .snowflake {
   color: #fff;
   font-size: 1em;
@@ -167,6 +170,7 @@ header {
   animation-delay: 2.5s;
 }
 
+/* Modal Styling */
 .modal-content {
   padding: 1%;
 }
@@ -187,6 +191,15 @@ header {
   padding-bottom: 10%;
 }
 
+.box ul {
+  list-style: none;
+}
+
+.none {
+  display: none;
+}
+
+/* Buttons */
 .forward {
   position: absolute;
   left: 50px;
@@ -278,6 +291,11 @@ header {
   margin: 0;
 }
 
+.btn-light {
+  font-weight: bolder;
+}
+
+/* Image and Form Inputs Styling */
 .stream {
   border-radius: 5px;
   max-width: 120px;
@@ -321,10 +339,6 @@ li {
   margin: 1rem;
 }
 
-.btn-light {
-  font-weight: bolder;
-}
-
 label {
   font-weight: bold;
   margin: 0;
@@ -334,12 +348,4 @@ label {
 #amountRange {
   display: flex;
   align-items: center;
-}
-
-.box ul {
-  list-style: none;
-}
-
-.none {
-  display: none;
 }
