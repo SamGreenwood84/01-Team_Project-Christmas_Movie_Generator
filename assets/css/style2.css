@@ -4,7 +4,7 @@ body {
   }  
 
 .image-col img {
-  width: 250%;
+  width: 200%;
 }
 
 .card {
@@ -165,6 +165,19 @@ footer #anchor {
   color: rgb(171, 17, 17);
 }
 
+@media screen and (max-width: 992px) {
+
+    .card img{
+        height: 85%;
+        margin-top: 10%;        
+    }
+    .btn {
+        transform: scale(.8);
+        margin: .2rem 0;
+    }
+    
+  }
+
 @media screen and (max-width: 767px) {
 
     body {
@@ -177,11 +190,14 @@ footer #anchor {
     }
 
     .card {
-      max-height: 400px;
+      max-height: 500px;
+      min-width: 400px;
       transform: scale(.7);
       margin: 0 auto;
       top: -75px;
     }
-    
-    /* Add more styles here */
+    .card img {
+        margin-top: -10%;
+        height: 100%;
+    }
   }
