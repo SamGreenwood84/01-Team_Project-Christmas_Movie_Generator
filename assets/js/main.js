@@ -62,7 +62,7 @@ $(".japanese").on("click", () => {
 $("#modalToggle2 .forward").on("click", () => {
   console.log("event happened");
   if (typeof lang === "undefined" || lang === "") {
-    alert("Please choose a language.");
+    $("#alert").modal("show");
   } else {
     $("#modalToggle2").modal("hide");
     $("#modalToggle3").modal("show");
@@ -86,7 +86,7 @@ $("#modalToggle3 .forward").on("click", () => {
     $("#modalToggle3").modal("hide");
     $("#modalToggle4").modal("show");
   } else {
-    alert("Please select an option.");    
+    $("#alert").modal("show"); 
   }
 });
 
@@ -119,7 +119,7 @@ $("#modalToggle4 .forward").on("click", () => {
     $("#modalToggle4").modal("hide");
     $("#modalToggle5").modal("show");
   } else {
-    alert("Please select a Grinch.");    
+    $("#alert").modal("show");   
   }
 });
 
@@ -192,7 +192,7 @@ $("#modalToggle5 .forward").on("click", () => {
     $("#modalToggle5").modal("hide");
     $("#modalToggle6").modal("show");
   } else {
-    alert("Please select a genre.");    
+    $("#alert").modal("show");  
   }
 });
 
@@ -209,7 +209,7 @@ $(".submit").on("click", () => {
     $("#modalToggle6").modal("hide");
     getMovie();
   } else {
-    alert("Please select a rating.");    
+    $("#alert").modal("show");   
   }
 })
 
