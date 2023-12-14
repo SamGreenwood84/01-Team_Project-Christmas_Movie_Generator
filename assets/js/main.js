@@ -34,11 +34,11 @@ $(".amazon").on("click", () => {
 $(".netflix").on("click", () => {
   console.log("netflix");
 });
-$(".disney").on("click", () => {
-  console.log("disney");
+$(".hbo").on("click", () => {
+  console.log("hbo");
 });
-$(".crave").on("click", () => {
-  console.log("crave");
+$(".hulu").on("click", () => {
+  console.log("hulu");
 });
 
 // Modal 2 listeners
@@ -311,22 +311,4 @@ function getMovie() {
         }
       })
       .catch((err) => console.error(err));
-  
-    //   let movieId = "5825";
-  
-    // // Get reviews with movie id, which can be found in the above query search {result.id}
-  
-    //   fetch(`https://api.themoviedb.org/3/movie/5825/reviews`, options)
-    //   .then(response => response.json())
-    // .then(data => {
-    //   console.log(data);
-    //   const result = data.results;
-  
-    //   data.results.forEach((result, i) => {
-    //       console.log(result.author);
-    //       console.log(result.content);
-    //      })
-    //   })
-  
-    //   .catch(err => console.error(err));  
 }

@@ -1,7 +1,8 @@
 /* Body Styling */
 body {
-    background-size: 100% 100%;
-  }  
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
 
 /* Snowflakes Animation */
 .snowflake {
@@ -141,10 +142,10 @@ body {
 /* Button Styling */
 .submit,
 .restart {
-    margin: .2rem 2rem;
-    color: midnightblue;
-    font-weight: bold;
-    width: 150px;
+  margin: 0.2rem 2rem;
+  color: midnightblue;
+  font-weight: bold;
+  width: 150px;
 }
 
 /* Footer */
@@ -166,48 +167,45 @@ footer #anchor {
 
 /* Media Queries */
 @media screen and (max-width: 992px) {
-
   .card {
     display: flex;
     align-items: center;
   }
 
-    .card img{
-      max-width: 100%;
-      height: auto;
-    }
-
-    .btn {
-      transform: scale(.8);
-      margin: .2rem 0;
-    }
-    
+  .card img {
+    max-width: 100%;
+    height: auto;
   }
+
+  .btn {
+    transform: scale(0.8);
+    margin: 0.2rem 0;
+  }
+}
 
 @media screen and (max-width: 767px) {
-
-    body {
-      font-size: 14px;
-    }
-
-    .btn {
-        margin: .2rem 0;
-        transform: scale(.8);
-    }
-
-    .card {
-      min-width: 400px;
-      transform: scale(.65);
-      margin: 0 auto;
-      padding-bottom: -10%;
-      top: -30px;
-    }
-    .card img {
-        margin-top: 0;
-        height: 100%;
-    }
-    footer {
-      margin-top: 10vh;
-      padding-bottom: 5vh;
-    }
+  body {
+    font-size: 14px;
   }
+
+  .btn {
+    margin: 0.2rem 0;
+    transform: scale(0.8);
+  }
+
+  .card {
+    min-width: 400px;
+    transform: scale(0.65);
+    margin: 0 auto;
+    padding-bottom: -10%;
+    top: -30px;
+  }
+  .card img {
+    margin-top: 0;
+    height: 100%;
+  }
+  footer {
+    margin-top: 10vh;
+    padding-bottom: 5vh;
+  }
+}

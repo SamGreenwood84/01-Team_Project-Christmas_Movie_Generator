@@ -46,9 +46,9 @@ function populateMovieCard() {
       const releaseDate = document.querySelectorAll(".releaseDate");
       const voteAverage = document.querySelectorAll(".rating");
       const totalPages = data.total_pages;
-
       let posterPath = result.poster_path;
       let posterURL = `https://image.tmdb.org/t/p/w500${posterPath}`;
+      // Populate the Card with values
       cards[0].src = posterURL;
       title[0].innerText = `${result.title}`;
       description[0].innerText = `${result.overview}`;
