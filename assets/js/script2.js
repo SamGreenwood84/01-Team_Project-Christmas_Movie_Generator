@@ -1,4 +1,4 @@
-const url = 'https://streaming-availability.p.rapidapi.com/countries';
+const url = 'https://streaming-availability.p.rapidapi.com/genres';
 
 const options = {
 method: 'GET', 
