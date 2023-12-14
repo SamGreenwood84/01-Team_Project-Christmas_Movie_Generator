@@ -39,7 +39,7 @@ function populateMovieCard() {
   )
     .then((response) => response.json())
     .then((data) => {
-      const result = data.results;
+      const result = data.results[0];
       const cards = document.querySelectorAll("img");
       const title = document.querySelectorAll(".card-title");
       const description = document.querySelectorAll(".card-text");
@@ -47,15 +47,13 @@ function populateMovieCard() {
       const voteAverage = document.querySelectorAll(".rating");
       const totalPages = data.total_pages;
 
-      data.results.forEach((result, i) => {
-        let posterPath = result.poster_path;
-        let posterURL = `https://image.tmdb.org/t/p/w500${posterPath}`;
-        cards[i].src = posterURL;
-        title[i].innerText = `${result.title}`;
-        description[i].innerText = `${result.overview}`;
-        releaseDate[i].innerText = `Released: ${result.release_date}`;
-        voteAverage[i].innerText = `Rating: ${result.vote_average}`;
-      });
+      let posterPath = result.poster_path;
+      let posterURL = `https://image.tmdb.org/t/p/w500${posterPath}`;
+      cards[0].src = posterURL;
+      title[0].innerText = `${result.title}`;
+      description[0].innerText = `${result.overview}`;
+      releaseDate[0].innerText = `Released: ${result.release_date}`;
+      voteAverage[0].innerText = `Rating: ${result.vote_average}`;
     })
     .catch((err) => console.error(err));
 }

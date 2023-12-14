@@ -126,15 +126,16 @@ body {
   animation-delay: 2.5s;
 }
 
-/* Card and Card Image Styling */
+/* Card Styling */
 .card {
   border: 12px dotted red;
   top: 75px;
   box-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
-.image-col img {
-  width: 200%;
+.image-col {
+  display: flex;
+  align-items: center;
 }
 
 /* Button Styling */
@@ -166,13 +167,19 @@ footer #anchor {
 /* Media Queries */
 @media screen and (max-width: 992px) {
 
+  .card {
+    display: flex;
+    align-items: center;
+  }
+
     .card img{
-        height: 85%;
-        margin-top: 10%;        
+      max-width: 100%;
+      height: auto;
     }
+
     .btn {
-        transform: scale(.8);
-        margin: .2rem 0;
+      transform: scale(.8);
+      margin: .2rem 0;
     }
     
   }
