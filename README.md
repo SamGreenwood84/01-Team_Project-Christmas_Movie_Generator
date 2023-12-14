@@ -1,6 +1,6 @@
 # Christmas-Movie-Generator
 
-** First Team Project **
+* First Team Project
 
 by Emilia Stewart, Ethan Wright, Shawn Meister & Sam Greenwood
 
@@ -24,7 +24,7 @@ WHEN I do not make a selection and try to go to next question
 THEN I will be alerted to make a selection in order to advance
 WHEN all the selections are made and the Submit button is pressed
 THEN my next Christmas Movie will be revealed on the next page
-WHEN I have reviewed my selection movie card with Image, Title, Description, Stream Availability, Rating and Release Date
+WHEN I have reviewed my selection movie card with Image, Title, Description, Stream Availibility, Rating and Release Date
 THEN I will be able to click Next Movie to review other selections
 within the chosen criteria or click Start Over to redo the quiz
 ```
@@ -46,6 +46,7 @@ Sam: "I used w3Schools, MDN Web Docs and our previous class activites on APIS, S
 Emilia: "I used W3Schools, CSSnowflakes and codepen.io for the Snowflakes and Multiple/Single select buttons. I also want to say thanks to my teammates for working hard and making this project a reality, and a thanks to our instructors for helping us when had questions and needed help."
 [Snowflakes on screen throughout the quiz](https://pajasevi.github.io/CSSnowflakes/)
 [Examples taken for Multiple/Single select buttons](https://codepen.io/kiprutobrian/pen/YzyOKjB)
+
 ## License
 
 Please see attached license file.
