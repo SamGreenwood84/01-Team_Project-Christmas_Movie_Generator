@@ -277,6 +277,7 @@ function getMovie() {
                   return movie.vote_average >= rating;
                 });
                 // Remove duplicates based on movie ID
+                // Movie may have been added more than once if had multiple genres included
                 ratedMovies = Array.from(
                   new Set(ratedMovies.map((movie) => movie.id))
                 ).map((id) => ratedMovies.find((movie) => movie.id === id));

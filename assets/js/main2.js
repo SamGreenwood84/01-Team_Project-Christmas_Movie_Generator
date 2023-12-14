@@ -1,14 +1,9 @@
-//  Shawn's code
-
-//  Do not change any of this
-
-//  We can work around this for now
-
-//  It will be commented out until needed
+// Variables Declared
 let myMovie = JSON.parse(localStorage.getItem("chosenMovie"));
 let myArray = JSON.parse(localStorage.getItem("ratedMovies"));
 let title = "";
 
+// Event Listeners
 $(document).ready(() => {
   title = myMovie.title;
   populateMovieCard();
@@ -27,6 +22,7 @@ $(".restart").on("click", () => {
     window.location.href = "index.html";
 });
 
+// Movie Card
 function populateMovieCard() {
   const options = {
     method: "GET",
@@ -36,7 +32,7 @@ function populateMovieCard() {
         "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYTBkNTFhMjI3ODc0YmVmNGU3OTQxM2Q1YTA4N2E4MyIsInN1YiI6IjY1NjkxOWY5YjdkMzUyMDEwYjUzYjRkNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.47k3rlk5NKDz5f-TsTWyak6hnq2mdRFdS2O5MyF6ZOk",
     },
   };
-  // First API call
+  // API call
   fetch(
     `https://api.themoviedb.org/3/search/movie?query=${title}&include_adult=false&language=en-US&page=1`,
     options
