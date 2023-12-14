@@ -20,13 +20,13 @@ WHEN I Click Let's Get Started button
 THEN first question modal will populate
 WHEN I make my selection(s)
 THEN five more question modals will populate after clicking forward arrow each time 
-WHEN I do not make a selection 
-THEN I will be altered at the end of the quiz to go back and make a selection
-WHEN all the selections are made and the Submit button
+WHEN I do not make a selection and try to go to next question
+THEN I will be alerted to make a selection in order to advance
+WHEN all the selections are made and the Submit button is pressed
 THEN my next Christmas Movie will be revealed on the next page
-WHEN I have reviewed my selection movie card with Image, Title, Description, Stream Availibility, Rating and Release Date
-THEN I will  be able to click Next Movie to review other selections
-within the chosen criteria or click  to redo the quiz
+WHEN I have reviewed my selection movie card with Image, Title, Description, Stream Availability, Rating and Release Date
+THEN I will be able to click Next Movie to review other selections
+within the chosen criteria or click Start Over to redo the quiz
 ```
 
 ## Mockup
