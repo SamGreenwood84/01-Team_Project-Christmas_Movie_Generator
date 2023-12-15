@@ -35,6 +35,8 @@ Here's an image showing the appearance of the web application:
 
 ![Theartre setting with Christmas billboard](assets/images/XmasMockup.png)
 
+[A link to the live application here:](https://samgreenwood84.github.io/christmas-movie-generator/)
+
 ## Credits
 
 Shawn: "I used Bootstrap Modal templates for our questions area. W3Schools and MDN Web Docs have been a valuable resource. Class notes were helpful for storing variables in local storage. The code snippets dealing with duplicate movies being in our array, and for filtering our array by ID were found on StackOverflow. Thanks are given to my teammates for the support shown, the concept and the idea generation we have accomplished together."
