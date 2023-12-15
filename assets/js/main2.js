@@ -8,9 +8,7 @@ let chosenMovie = "";
 // Event Listeners
 $(document).ready(() => {
   title = myMovie.title;
-  console.log(title);
   movieId = myMovie.id;
-  console.log(movieId);
   populateMovieCard();
 });
 
@@ -20,17 +18,19 @@ $(".submit").on("click", () => {
     let index = Math.floor(Math.random() * myArray.length);
     chosenMovie = myArray[index];
     title = chosenMovie.title;
+    movieId = chosenMovie.id;
     populateMovieCard();
-    getStream(title);
+    getStream(title, movieId);
   }
 });
+
 $(".restart").on("click", () => {
     window.location.href = "index.html";
 });
 
-function getStream(title) {
-  movieId = chosenMovie.id;
+function getStream(title, movieId) {
   console.log(title);
+  console.log(movieId);
   const url = `https://streaming-availability.p.rapidapi.com/search/filters?country=us&services=netflix,prime,hbo,hulu&show_type=movie&keyword=${title}`;
 
   const options = {
@@ -45,17 +45,19 @@ function getStream(title) {
       fetch(url, options)
           .then(res => res.json())
           .then(data => {
-              console.log(data);
               let results = data.result;
-              
-              console.log(results[0].streamingInfo.us[0].service);
-              
-              // results[0].tmdbId can be matched with chosenMovie ID
-          }
-          )
+              let matchedResult = results.find(result => result.tmdbId === movieId);
+              // populate streaming section on card
+              if (matchedResult) {
+                matchedResult.streamingInfo.us.forEach(info => {
+                  $(".streaming").text("Streaming on: "+info.service);
+                });
+              } else {        
+                $(".streaming").text("Streaming N/A");
+              }
+        })
           .catch(error => console.error('Error', error));
 }
-
 
 // Movie Card
 function populateMovieCard() {
